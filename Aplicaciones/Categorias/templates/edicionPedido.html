@@ -1,0 +1,27 @@
+{% extends "./base.html" %}
+
+{% block title %} Control de Pedidos {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h4>Edición de Pedido</h4><br>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editarPedido/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="txtCodigo" id="txtCodigo" value="{{pastel.codigo}}" class="form-control" placeholder="Código" minlength="3" maxlength="6" readonly required><br>
+                        <input type="text" name="txtNombre" id="txtNombre" value="{{pastel.nombre}}" class="form-control" placeholder="Nombre"  maxlength="50" required><br>
+                        <input type="text" name="txtEstado" id="txtEstado" value="{{pastel.cantidad}}" class="form-control" min="1" max="9" value="1" required><br>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info btn-block text-white">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+</div>
+</div>
+
+{% endblock %}

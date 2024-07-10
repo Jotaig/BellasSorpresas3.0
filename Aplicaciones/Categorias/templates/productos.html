@@ -1,0 +1,109 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %} Productos {% endblock %}
+
+{% block body %}
+
+<section class="services">
+    <div id="lista_producto" class="container">
+        <i><h2 class="text-center">Productos</h2></i><br>
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="card text-black text-center pb-2">
+                    <div class="card-body">
+                        <img src='{% static "img/c1.jpg" %}' alt="">
+                        <h3 class="card-title">Torta 12 Personas</h3>
+                        <p>
+                            Tortas Sin Azúcar es una pastelería especializada en la elaboración de tortas y postres deliciosos, 
+                            totalmente libres de azúcar.
+                        </p>
+                        <p>$20.000.-</p>
+                        <br>
+                        <button class="btn btn-info">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="card text-black text-center pb-2">
+                    <div class="card-body">
+                        <img src='{% static "img/c2.jpg" %}' alt="">
+                        <h3 class="card-title">Torta 24 Personas</h3>
+                        <p>
+                            Bellas Sorpresas Pastelería es una pastelería de lujo que se especializa en la creación de tortas y postres gourmet 
+                            con ingredientes de la más alta calidad.
+                        </p>
+                        <p>$35.000.-</p>
+                        <button class="btn btn-info">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="card text-black text-center pb-2">
+                    <div class="card-body">
+                        <img src='{% static "img/c3.jpg" %}' alt="">
+                        <h3 class="card-title">Torta 48 Personas</h3>
+                        <p>
+                            Pastelería especializada en la elaboración de tortas y postres libres de gluten, 
+                            diseñados para satisfacer todas tus necesidades.
+                        </p>
+                        <p>$65.000.-</p>
+                        <br>
+                        <button class="btn btn-info">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="card text-black text-center pb-2">
+                    <div class="card-body">
+                        <img src='{% static "img/c4.jpg" %}' alt="">
+                        <h3 class="card-title">Panqueques</h3>
+                        <p>
+                            Disfruta de nuestras exquisitos panqueques, 
+                            una deliciosa fusión de suavidad y textura. Por tiempo limitado, aprovecha nuestra promoción especial.
+                        </p>
+                        <p>$10.000.-</p>
+                        <button class="btn btn-info">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="card text-black text-center pb-2">
+                    <div class="card-body">
+                        <img src='{% static "img/c5.jpg" %}' alt="">
+                        <h3 class="card-title">Alfajores</h3>
+                        <p>
+                            ¡Deléitate con nuestros alfajores artesanales! Descubre la perfecta combinación de dulce y suavidad en cada bocado.
+                        </p>
+                        <p>$5.000-</p>
+                        <br>
+                        <button class="btn btn-info">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="card text-black text-center pb-2">
+                    <div class="card-body">
+                        <img src='{% static "img/c6.jpg" %}' alt="">
+                        <h3 class="card-title">Tartaletas</h3>
+                        <p>
+                            ¡Disfruta de la frescura y el sabor en cada tartaleta! Descubre nuestras tartaletas artesanales,
+                             elaboradas con los ingredientes más selectos.
+                        </p>
+                        <p>$15.000.-</p>
+                        <br>
+                        <button class="btn btn-info">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

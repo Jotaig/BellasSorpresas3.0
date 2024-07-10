@@ -1,0 +1,65 @@
+{% extends "./base.html" %}
+
+{% block title %} Control de Pedidos {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert" >&times;</button>
+            <strong class="text-dak">{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <h4>Ingreso de Pedidos</h4><br>
+        <div class="card">
+            <div class="card-body">
+                <form action="/registrarPedido/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="txtCodigo" id="txtCodigo" class="form-control" placeholder="N° de Pedido" minlength="3" maxlength="6" required><br>
+                        <input type="text" name="txtNombre" id="txtNombre" class="form-control" placeholder="Nombre Producto"  maxlength="50" required><br>
+                        <input type="text" name="txtEstado" id="txtEstado" class="form-control" placeholder="Estado"  maxlength="50" required><br>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info btn-block text-white">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h4>Control de Pedidos</h4>
+        <div class="table responsive py-4">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Pedido</th>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in pasteles %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{p.codigo}}</td>
+                        <td>{{p.nombre}}</td>
+                        <td>{{p.cantidad}}</td>
+                        <td><a href="edicionPedido/{{p.codigo}}" class="btn btn-info text-white">Editar</a></td>
+                        <td><a href="eliminarPedido/{{p.codigo}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %} Servicios {% endblock %}
+
+{% block body %}
+
+<section class="product">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="secction-header text-center pb-5">
+                    <i><h2>Servicios</h2></i>
+                    <br>
+                    <p>
+                        Para una pastelería premium como "Bellas Sorpresas", es esencial ofrecer una amplia gama de servicios de alta calidad para destacar con su 
+                        dulzor. Aquí hay algunas sugerencias de servicios que podrían complementar con tus necesidades :)<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-3">
+                <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                    <div class="text-center">
+                        <img src='{% static "img/pr1.png" %}' alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Productos exclusivos y personalizados</h5>
+                        <p>
+                            Ofrecemos pasteles y postres personalizados que reflejen la creatividad y la excelencia en la repostería. 
+                            Esto incluye pasteles diseñados a medida o para ocasiones especiales.
+                        </p>
+                        <a href="{% url 'contacto' %}"><button class="btn btn-info">Contactar</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-3">
+                <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                    <div class="text-center">
+                        <img src='{% static "img/pr2.png" %}' alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio de Eventos Especiales</h5>
+                        <p>
+                            Proporcionar servicios de catering para bodas, fiestas y eventos corporativos. 
+                            Esto puede incluir no solo pasteles y postres, sino también mesas de dulces y estaciones de postres.
+                        </p>
+                        <br><br>
+                        <a href="{% url 'contacto' %}"><button class="btn btn-info">Contactar</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-3">
+                <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                    <div class="text-center">
+                        <img src='{% static "img/pr3.png" %}' alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Suscripciones y Precios al mayor</h5>
+                        <p>
+                            Ofrecemos programas de suscripción para la entrega regular de postres exclusivos y también puedes 
+                            cotizar precios al por mayor recompensa a los clientes habituales. :)
+                        </p>
+                        <br><br>
+                        <a href="{% url 'contacto' %}"><button class="btn btn-info">Contactar</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-3">
+                <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
+                    <div class="text-center">
+                        <img src='{% static "img/pr4.png" %}' alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Degustaciones y Clases de Repostería</h5>
+                        <p>
+                            Recuerda revisar los eventos regulares donde participaremos y conoceras las diversas categorias que tenemos
+                            puedes degustar y aprender de la magia de Bellas Sorpresas.
+                        </p>
+                        <br>
+                        <a href="{% url 'contacto' %}"><button class="btn btn-info">Contactar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

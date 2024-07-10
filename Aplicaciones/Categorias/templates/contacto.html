@@ -1,0 +1,150 @@
+{% extends "./base.html" %}
+
+{% block title %} Contacto {% endblock %}
+
+{% block body %}
+
+<section class="contact">
+    <div class="container mb-lg-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="secction-header text-center pb-2 pb-lg-5">
+                    <br><br><br>
+                    <i><h2>Contacto</h2></i><br>
+                    <p>
+                        Bellas Sorpresas - Pastelería Premium
+                        <br>
+                        Dirección: Talagante 123
+                        <br>
+                        Teléfono: + 56 9 1331 3313
+                        <br>
+                        Correo Electrónico: info@bellasorpresas.com
+                        <br>
+                        Redes Sociales:
+                        <br>
+                        Instagram: @bellasorpresas_pasteleria
+                        Facebook: /bellasorpresaspasteleria
+                        <br>
+                        Horario de Atención:
+                        <br>
+                        Lunes a Viernes: 9:00 AM - 7:00 PM
+                        <br>
+                        Sábados: 10:00 AM - 6:00 PM
+                        <br>
+                        Domingos: Cerrado
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="col-12 col-md-12 col-lg-6 pt-4 pb-4">
+                <form action="#" class="bg-light p-4 m-auto shadow-sm needs-validation" novalidate id="form">
+                    <div class="row">
+                        <i><h3 class="text-center">Formulario de Contacto</h3></i>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Nombre" type="text" id="name" required>
+                                <div class="valid-feedback">
+                                    Todo bien.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Es necesario poner el nombre.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Telefono" type="text" id="telefono"
+                                    required>
+                                <div class="valid-feedback">
+                                    Todo bien.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Es necesario poner el telefono.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Email" type="email" id="email" required>
+                                <div class="valid-feedback">
+                                    Todo bien.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Es necesario poner el email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Pais" type="text" id="pais" required>
+                                <div class="valid-feedback">
+                                    Todo bien.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Es necesario poner el pais.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Ciudad" type="text" id="ciudad" required>
+                                <div class="valid-feedback">
+                                    Todo bien.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Es necesario poner la ciudad.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Mensaje" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label for="terms" class="form-check-label">Acepto los terminos y condiciones
+                                </label>
+                                <div class="valid-feedback">
+                                    Todo bien.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Es necesario aceptar los terminos.
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-info btn-lg btn-block mt-3" data-bs-toggle="modal" data-bs-target="#mi-modal" type="submit">Enviar</button>
+                        <p class="warnings" id="warnings"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container col-12">
+    <div class="modal" id="mi-modal" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-center">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title">Faltan Rellenar Datos</h5>
+                </div>
+
+                <div class="modal-body">
+                    <p>
+                        Completa todos los campos de la manera Correcta.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal" >Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

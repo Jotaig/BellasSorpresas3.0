@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/pedido.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/a49f65261a.js" crossorigin="anonymous"></script>
+
+    <title>{% block title %} {% endblock %}</title>
+
+</head>
+<body>
+
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light">
+
+        <di class="container">
+            <a href="{% url 'index' %}" class="navbar-brand"><span class="text-info">Bellas</span>Sorpresas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-start"
+                aria-controls="navbar-start" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-start">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'productos' %}">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'servicios' %}">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}">Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href=""></a>
+                    </li>
+                    <div class="container">
+                        <nav id="carrito">
+                            <i class="fa-solid fa-cart-shopping">
+                                <div class="buy-card">
+                                    <ul class="nav-card">
+                                        <li>Nombre</li>
+                                        <li>Precio</li>
+                                        <li>Cantidad</li>
+                                        <li></li>
+                                    </ul>
+                                    <div class="lista_de_compra">
+                                        <p>Torta 12 personas</p>
+                                        <p>$20.000</p>
+                                        <p>1</p>
+                                        <p><span>X</span></p>
+                                    </div>
+                                    <button id="vaciar_carrito">Vaciar Carrito</button>
+                                </div>
+                            </i>
+                        </nav>
+
+                    </div>
+                </ul>
+            </div>
+            <img src='{% static "img/logo.jpg" %}' class="loguito" alt="...">
+            <img src='{% static "img/redessociales.jpg" %}' class="redessociales d-none d-sm-block" alt="">
+            </div>
+    </nav>
+    
+    <div class="container">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white">Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/pedido.js' %}"></script>
+</body>
+</html>
